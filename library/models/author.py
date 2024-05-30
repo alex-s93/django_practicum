@@ -18,3 +18,6 @@ class Author(models.Model):
         validators=[MinValueValidator(1),MaxValueValidator(10)],
         verbose_name='Рейтинг автора'
     )
+
+    def __str__(self):
+        return f"{self.name} {self.surname}"
